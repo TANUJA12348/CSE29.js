@@ -2,27 +2,73 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amazon Clone</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-<header>
-  <h1>Amazon Clone Store</h1>
+<!-- Navbar -->
 
-  <input type="text" id="searchBar" placeholder="Search products...">
+<nav class="navbar">
 
-  <div>
-    🛒 Cart: <span id="cart-count">0</span>
-  </div>
-</header>
+<div class="logo">
+<h2>amazon</h2>
+</div>
 
-<section id="product-container"></section>
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Search Amazon Products..."
+onkeyup="searchProducts()">
+<button>
+<i class="fa fa-search"></i>
+</button>
+</div>
+
+<div class="cart">
+<i class="fa fa-shopping-cart"></i>
+Cart:
+<span id="cartCount">0</span>
+</div>
+
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="hero-content">
+<h1>Welcome to Amazon Clone</h1>
+<p>Best Deals On Electronics, Fashion & More</p>
+</div>
+
+</section>
+
+<!-- Products -->
+
+<section class="products-section">
+
+<h2>Today's Deals</h2>
+
+<div class="products" id="productContainer">
+
+</div>
+
+</section>
 
 <footer>
-  <p>© 2026 Amazon Clone Project</p>
+
+<p>
+© 2026 Amazon Clone Project
+</p>
+
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
