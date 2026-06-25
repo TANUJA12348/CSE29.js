@@ -1,74 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon Clone</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Even Odd Checker</title>
+
+    <style>
+
+        body{
+            background-color: lightblue;
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .box{
+            background-color: white;
+            width: 350px;
+            padding: 30px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        h1{
+            color: blue;
+        }
+
+        input{
+            width: 250px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        button{
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: darkgreen;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-<!-- Navbar -->
+<div class="box">
 
-<nav class="navbar">
+<h1>Even Odd Checker</h1>
 
-<div class="logo">
-<h2>amazon</h2>
-</div>
+<input type="number" id="number" placeholder="Enter a number">
 
-<div class="search-box">
-<input
-type="text"
-id="searchInput"
-placeholder="Search Amazon Products..."
-onkeyup="searchProducts()">
-<button>
-<i class="fa fa-search"></i>
-</button>
-</div>
+<br>
 
-<div class="cart">
-<i class="fa fa-shopping-cart"></i>
-Cart:
-<span id="cartCount">0</span>
-</div>
+<button onclick="check()">Check</button>
 
-</nav>
-
-<!-- Hero Section -->
-
-<section class="hero">
-
-<div class="hero-content">
-<h1>Welcome to Amazon Clone</h1>
-<p>Best Deals On Electronics, Fashion & More</p>
-</div>
-
-</section>
-
-<!-- Products -->
-
-<section class="products-section">
-
-<h2>Today's Deals</h2>
-
-<div class="products" id="productContainer">
+<p id="result"></p>
 
 </div>
 
-</section>
 
-<footer>
+<script>
 
-<p>
-© 2026 Amazon Clone Project
-</p>
+function check()
+{
 
-</footer>
+    let num = document.getElementById("number").value;
 
-<script src="script.js"></script>
+
+    if(num % 2 == 0)
+    {
+        document.getElementById("result").innerHTML = 
+        num + " is Even Number";
+    }
+
+    else
+    {
+        document.getElementById("result").innerHTML = 
+        num + " is Odd Number";
+    }
+
+}
+
+</script>
+
 
 </body>
 </html>
